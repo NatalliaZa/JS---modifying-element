@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- 3. Сверстать страницу с 2-я тегами input и двумя тегами h1. 
+    Программа должна в режиме реального времени, когда пользователь что-то вводит в input-ы, 
+    дублировать это в тегах h1. Подсказка: введенный текст можно получить из атрибута value тега input. 
+    Так же для решения пригодится метод setInterval().-->
+
+    <input type="text" class="firstInp" >
+    <input type="text" class="secondInp">
+    <h1 class="firstH"></h1>
+    <h1 class="secondH"></h1>
+
+    
+
+    <script>
+
+    let input1 = document.querySelector('.firstInp');
+    let title1 = document.querySelector('.firstH');
+    setInterval(copyTextInput1, 0);
+        function  copyTextInput1() {
+            title1.textContent = input1.value;
+            
+        }
+    
+    let input2 = document.querySelector('.secondInp');
+    let title2 = document.querySelector('.secondH');
+    setInterval(copyTextInput2, 0);
+        function  copyTextInput2() {
+            title2.textContent = input2.value;
+            
+        }
+    
+
+
+    </script>
+
+
+</body>
+</html>
